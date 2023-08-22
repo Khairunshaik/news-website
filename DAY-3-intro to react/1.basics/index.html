@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- <h1>Hello world by HTML</h1> -->
+    </div>
+    <script>
+        // let h1 = document.createElement("h1");
+        // h1.innerText = "Hello world by JavaScript";
+        // document.getElementById("root").appendChild(h1);
+
+
+        //by react
+        const h1 = React.createElement("h1" , {id: "heading1"} , "Hello World by React JS");
+        const h2 = React.createElement("h2" , {id: "heading1"} , "This is my header");
+        const button = React.createElement("button" , {id: "btn"} , "Click Me");
+        const img = React.createElement("img" , {src:"https://tse2.mm.bing.net/th?id=OIP.Sr7L_HArrl7ZhLqumNsbTAHaFt&pid=Api&P=0&h=180" });
+
+        const div = React.createElement("div" , {} , [h1,h2,button,img]);
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(div);
+
+    </script>
+</body>
+</html>
